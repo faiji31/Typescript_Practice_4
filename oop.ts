@@ -122,3 +122,28 @@ protected earnings: number;
 const nextDriver = new ProDriver()
 
 console.log(nextDriver)
+
+
+// getter and setter 
+
+class Wallet {
+    private _balance:number = 0;
+
+    get balance(){
+     return this._balance
+    }
+
+    set deposit(amount:number){
+        if (amount>0){
+            this._balance += amount;
+        }
+    }
+}
+
+
+const wlt = new Wallet();
+
+
+wlt.deposit = 302;
+console.log(wlt.balance)
+
