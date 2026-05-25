@@ -174,6 +174,29 @@ const instance2 = new specialCar()
 const instance3 = new PathaoBike()
 
 
-console.log(instance1.calculateFare(12))
-console.log(instance2.calculateFare(12))
-console.log(instance3.calculateFare(12))
+// console.log(instance1.calculateFare(12))
+// console.log(instance2.calculateFare(12))
+// console.log(instance3.calculateFare(12))
+
+
+// abstraction
+
+abstract class payment {
+    abstract pay(amount:number):void
+
+
+    printRecipt(){
+        console.log("payment done")
+    }
+}
+
+class BkashPayment extends payment{
+    pay(amount:number){
+        console.log(`paid ${amount} via bkash`)
+    }
+}
+
+
+const checkBaksh = new BkashPayment ()
+
+checkBaksh.pay(3444)
