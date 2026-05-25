@@ -42,5 +42,47 @@ function printId(id:number | string){
   }
 }
 
-printId("abcd")
-printId(30)
+// printId("abcd")
+// printId(30)
+
+type TDriver = {driverName:string};
+type TAdmin = {role:string}
+
+const Driver: TDriver ={driverName: "Jubaer"}
+const admin: TAdmin ={role:"AdminName"}
+function checkUser(user: TDriver | TAdmin){
+    if("role" in user){
+        console.log(admin.role)
+    }
+    else{
+        console.log(Driver.driverName)
+    }
+}
+
+// checkUser(Driver)
+
+
+// Instance off
+
+class Car{
+    drive(){
+    console.log("this is drive")
+    }
+}
+
+class Bike{ 
+    Ride(){
+    console.log("this is bike")
+    }
+}
+
+function operator(vechile: Car | Bike ){
+    if(vechile instanceof Car){
+        vechile.drive()
+    }
+    else{
+        vechile.Ride()
+    }
+}
+operator(new Car())
+operator(new Bike())
