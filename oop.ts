@@ -147,3 +147,33 @@ const wlt = new Wallet();
 wlt.deposit = 302;
 console.log(wlt.balance)
 
+
+// Polymorpisum > Bohurupi
+
+class specialVecicle{
+    calculateFare(distance:number):number{
+        return distance * 10
+    }
+}
+
+class specialCar extends specialVecicle{
+  calculateFare(distance: number): number {
+      return distance * 500 
+  }
+}
+
+
+class PathaoBike extends specialVecicle{
+ calculateFare(distance: number): number {
+     return distance *200
+ }
+}
+
+const instance1 = new specialVecicle()
+const instance2 = new specialCar()
+const instance3 = new PathaoBike()
+
+
+console.log(instance1.calculateFare(12))
+console.log(instance2.calculateFare(12))
+console.log(instance3.calculateFare(12))
