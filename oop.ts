@@ -84,5 +84,41 @@ function operator(vechile: Car | Bike ){
         vechile.Ride()
     }
 }
-operator(new Car())
-operator(new Bike())
+// operator(new Car())
+// operator(new Bike())
+
+// Access Modifier
+
+class Drivers{
+    name: string;
+   private nid: string;
+protected earnings: number;
+
+    constructor(name:string,nid:string, earnings: number){
+        this.name = name
+        this.earnings = earnings
+        this.nid = nid
+    }
+
+}
+ const driver1 = new Drivers("Faiji","nid123",20000)
+
+ console.log(driver1.name)
+
+//  inheritance
+ class ProDriver extends Drivers{
+    certifiteDriver(){
+        console.log("He is a Pro driver")
+    }
+    constructor(){
+
+   
+    super("siam","nid12333",10000)
+    this.earnings = 340000;
+
+ }
+}
+
+const nextDriver = new ProDriver()
+
+console.log(nextDriver)
