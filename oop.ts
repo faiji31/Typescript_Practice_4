@@ -18,7 +18,29 @@ class Ride{
     }
 
 }
+//  class hocche pura object er bluePrint 
 
 const ride1=new Ride("Liam",20)
-console.log(ride1)
-console.log(ride1.calculateOil())
+// console.log(ride1)
+// console.log(ride1.calculateOil())
+
+
+// const ride2 = new Ride("siam",100)
+// console.log(ride2)
+// console.log(ride2.calculateOil())
+
+
+// type Guard
+
+function printId(id:number | string){
+  if(typeof id=== "string"){
+    console.log(id.toUpperCase())
+
+  }
+  else{
+    console.log(id.toFixed(2))
+  }
+}
+
+printId("abcd")
+printId(30)
