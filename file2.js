@@ -1,3 +1,8 @@
-const {a} = require("./file1")
+const {a : x} = require("./file1")
+const {a : z} = require("./file3")
 
-console.log(a)
+const add = require("./utility/add.js")
+
+console.log(add(x,z))
+
+// console.log(x,z)
