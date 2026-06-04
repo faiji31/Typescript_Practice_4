@@ -200,3 +200,15 @@ class BkashPayment extends payment{
 const checkBaksh = new BkashPayment ()
 
 checkBaksh.pay(3444)
+
+// Encapsulation==> capsulation er moddhe dhuiya deoa 
+
+
+class Account{
+    private _balance: number = 0
+
+    deposit(amount:number){
+        amount>0 ? this._balance + amount : this._balance;
+
+    }
+}
